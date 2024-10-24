@@ -1,13 +1,20 @@
 import express, {Request, Response, NextFunction} from "express";
 import 'express-async-errors'
-
+import path from 'path'
 import cors from 'cors'
 
 
 import {router} from './routes'
 
 
+
 const app = express()
+
+// midlewware para imagens estaticas
+app.use(
+    './files/', 
+    express.static(path.resolve(__dirname, '..', upload de imagem no produto'tmp'))
+)
 
 app.use(cors())
 app.use(express.json())
