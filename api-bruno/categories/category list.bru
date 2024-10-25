@@ -1,0 +1,21 @@
+meta {
+  name: category list
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3333/category
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2xlaXNvbiBjYXJsb3MiLCJlbWFpbCI6InRlc3RlMEB0ZXN0ZS5jb20iLCJpYXQiOjE3Mjk3MDU4OTIsImV4cCI6MTczMjI5Nzg5Miwic3ViIjoiNTk1NmQxYmUtY2FjMi00ZDJiLThkYjUtNGMwNWZiZDc5MjRiIn0.6A84OB3dT0KcIgf5mOzKfli5RLqHT0RPjhwvFnHclbs
+}
+
+body:json {
+  {
+    "name": "Sorvetes"
+  }
+}

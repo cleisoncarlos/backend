@@ -1,0 +1,35 @@
+meta {
+  name: product
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/product
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2xlaXNvbiBjYXJsb3MiLCJlbWFpbCI6InRlc3RlMEB0ZXN0ZS5jb20iLCJpYXQiOjE3Mjk3Nzk3NzUsImV4cCI6MTczMjM3MTc3NSwic3ViIjoiNTk1NmQxYmUtY2FjMi00ZDJiLThkYjUtNGMwNWZiZDc5MjRiIn0.Uhd6sCv3db8EMtRIGj_aceuUiScid1016BVZGstrB4M
+}
+
+body:json {
+  {
+    "name": "teste",
+    "description": "description teste",
+    "price": "123465",
+    "banner": "/teste/img.jpg",
+    "category_id": "2ea409c7-c80d-44fd-aa86-feaa4fd49549"
+    
+    
+  }
+}
+
+body:multipart-form {
+  name: Pizza de peperone
+  price: 42
+  description: Pizza muito top!
+  file: @file(C:\Users\Mentor\Downloads\GZ2b51yXkAoa10J.jpg)
+  category_id: 2ea409c7-c80d-44fd-aa86-feaa4fd49549
+}

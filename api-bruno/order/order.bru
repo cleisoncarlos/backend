@@ -1,0 +1,22 @@
+meta {
+  name: order
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/order
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiY2xlaXNvbiBjYXJsb3MiLCJlbWFpbCI6InRlc3RlMEB0ZXN0ZS5jb20iLCJpYXQiOjE3Mjk3Nzk3NzUsImV4cCI6MTczMjM3MTc3NSwic3ViIjoiNTk1NmQxYmUtY2FjMi00ZDJiLThkYjUtNGMwNWZiZDc5MjRiIn0.Uhd6sCv3db8EMtRIGj_aceuUiScid1016BVZGstrB4M
+}
+
+body:json {
+  {
+    "table": 25,
+    "name": "description name"  
+  }
+}
