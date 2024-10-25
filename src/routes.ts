@@ -10,6 +10,8 @@ import { DetailUserController } from "./controllers/user/DetailUserController";
 import { CreateCategoryController } from "./controllers/category/CreateCategoryController";
 import { ListCategoryController } from "./controllers/category/ListCategoryController";
 import { CreateProductController } from "./controllers/product/CreateProductController";
+import { ListByCategoryController } from "./controllers/product/ListByCategoryController";
+import { CreateOrderController } from "./controllers/order/CreateOrderController";
 
 const router = Router();
 
@@ -25,8 +27,11 @@ router.post('/category', isAutenticated, new CreateCategoryController().handle)
 router.get('/category', isAutenticated, new ListCategoryController().handle)
 
 //rota products
-
 router.post('/product', isAutenticated, upload.single('file'), new CreateProductController().handle)
+router.get('/category/product', isAutenticated, new ListByCategoryController().handle)
 
+
+// rotas order
+router.post('/order', isAutenticated, new CreateOrderController().handle)
 
 export { router };

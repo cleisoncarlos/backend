@@ -12,9 +12,9 @@ const app = express()
 
 // midlewware para imagens estaticas
 app.use(
-    './files/', 
-    express.static(path.resolve(__dirname, '..', upload de imagem no produto'tmp'))
-)
+    '/files',
+    express.static(path.resolve(__dirname, '..', 'tmp'))
+  )
 
 app.use(cors())
 app.use(express.json())
