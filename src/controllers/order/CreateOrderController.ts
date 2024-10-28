@@ -13,7 +13,7 @@ async handle(req: Request, res: Response){
         name
     })
 
-   return res.json(order)
+    res.json(order)
 }
 }
 

@@ -11,7 +11,7 @@ class ListByCategoryController{
             category_id
         })
 
-    return  res.json(products)
+      res.json(products)
 
     }
 }
